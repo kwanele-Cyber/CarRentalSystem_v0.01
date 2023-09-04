@@ -1,0 +1,200 @@
+﻿@model CarRentalSystem.Models.UserModel
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/User/_LayoutPage1.cshtml";
+}
+
+<fieldset>
+    <legend>
+        User Registration
+    </legend>
+    @using (Html.BeginForm("Register", "User", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <td>
+                    @Html.LabelFor(fn => fn.FirstName)
+                </td>
+                <td>
+                    @Html.TextBoxFor(fn => fn.FirstName)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.FirstName, null, new { @class = "text text-danger" })
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(ln => ln.LastName)
+                </td>
+                <td>
+                    @Html.TextBoxFor(ln => ln.LastName)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.LastName, null, new { @class = "text text-danger" })
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(e => e.Email)
+                </td>
+                <td>
+                    @Html.TextBoxFor(e => e.Email)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.Email, null, new { @class = "text text-danger" })
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(ad => ad.Address)
+                </td>
+                <td>
+                    @Html.TextBoxFor(ad => ad.Address)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.Address, null, new { @class = "text text-danger" })
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(e => e.PhoneNumber)
+                </td>
+                <td>
+                    @Html.TextBoxFor(e => e.PhoneNumber)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.PhoneNumber, null, new { @class = "text text-danger" })
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(e => e.Gender)
+                </td>
+                <td>
+                    Male @Html.RadioButtonFor(e => e.Gender, "Male")
+                    Female @Html.RadioButtonFor(e => e.Gender, "Female")
+                    None @Html.RadioButtonFor(e => e.Gender, "None")
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.Gender, null, new { @class = "text text-danger" })
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(e => e.Username)
+                </td>
+                <td>
+                    @Html.TextBoxFor(e => e.Username)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.Username, null, new { @class = "text text-danger" })
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(e => e.Password)
+                </td>
+                <td>
+                    @Html.PasswordFor(e => e.Password)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.Password, null, new { @class = "text text-danger" })
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(e => e.ConfirmPassword)
+                </td>
+                <td>
+                    @Html.PasswordFor(e => e.ConfirmPassword)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.ConfirmPassword, null, new { @class = "text text-danger" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(e => e.UserType)
+                </td>
+                <td>
+                    @Html.TextBoxFor(e => e.UserType)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="submit" value="Register" />
+                            </td>
+                            <td>
+                                <input type="reset" value="Reset" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            @*<tr>
+                    <td colspan="1">
+                        @Html.ValidationMessageFor(m=>m.successMessage , null, new { @class = "alert alert-success" })
+                    </td>
+                </tr>*@
+        </table>
+    }
+</fieldset>
+
+<!--- Stolen from Login page-->
+@*<div class="form-register">
+    <h1>Registration</h1>
+    <div class="form-content">
+        @using (Html.BeginForm("Register", "User", FormMethod.Post))
+        {
+            <div class="email-w3l">
+                <span class="i1"><i class="fa fa-user" aria-hidden="true"></i></span>
+                <div class="email" >@Html.EditorFor(m=> m.Username) </div>  
+                <p class="error"> @Html.ValidationMessageFor(m => m.Username, null, new { @class = "error" })</p>
+            </div>
+
+            <div class="submit-agileits">
+                <input class="register" type="submit" value="register">
+            </div>
+        }
+    </div>
+</div>*@
