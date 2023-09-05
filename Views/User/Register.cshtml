@@ -1,7 +1,6 @@
 ﻿@model CarRentalSystem.Models.UserModel
 @{
-    ViewBag.Title = "Register";
-    Layout = "~/Views/User/_LayoutPage1.cshtml";
+    ViewBag.Title = "Registraction";
 }
 
 <fieldset>
@@ -182,19 +181,19 @@
 
 <!--- Stolen from Login page-->
 @*<div class="form-register">
-    <h1>Registration</h1>
-    <div class="form-content">
-        @using (Html.BeginForm("Register", "User", FormMethod.Post))
-        {
-            <div class="email-w3l">
-                <span class="i1"><i class="fa fa-user" aria-hidden="true"></i></span>
-                <div class="email" >@Html.EditorFor(m=> m.Username) </div>  
-                <p class="error"> @Html.ValidationMessageFor(m => m.Username, null, new { @class = "error" })</p>
-            </div>
+        <h1>Registration</h1>
+        <div class="form-content">
+            @using (Html.BeginForm("Register", "User", FormMethod.Post))
+            {
+                <div class="email-w3l">
+                    <span class="i1"><i class="fa fa-user" aria-hidden="true"></i></span>
+                    <div class="email" >@Html.EditorFor(m=> m.Username) </div>
+                    <p class="error"> @Html.ValidationMessageFor(m => m.Username, null, new { @class = "error" })</p>
+                </div>
 
-            <div class="submit-agileits">
-                <input class="register" type="submit" value="register">
-            </div>
-        }
-    </div>
-</div>*@
+                <div class="submit-agileits">
+                    <input class="register" type="submit" value="register">
+                </div>
+            }
+        </div>
+    </div>*@

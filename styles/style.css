@@ -38,7 +38,8 @@ body {
 	 -moz-background-size:cover;
 	 -o-background-size:cover;
 	 -ms-background-size:cover;
-	font-family: 'Raleway', sans-serif;
+	 font-family: 'Raleway', sans-serif;
+
 }
 
 .error{
@@ -211,7 +212,7 @@ footer a:hover {
 }
 
 /*--responsive--*/
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 1440px) {
 	h1 {
     font-size: 57px
 }

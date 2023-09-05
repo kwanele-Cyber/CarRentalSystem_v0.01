@@ -23,6 +23,11 @@ namespace CarRentalSystem.Controllers
             return View("UserDesh");
         }
 
+        public ActionResult CarListing()
+        {
+            return View();
+        }
+
         public ActionResult Register()
         {
             UserModel objUserModel= new UserModel();
@@ -92,6 +97,8 @@ namespace CarRentalSystem.Controllers
             //    conn.Close();
             //    return View("Login");
             //}
+
+
         }
     }
 }
